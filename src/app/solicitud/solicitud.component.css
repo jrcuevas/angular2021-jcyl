@@ -1,3 +1,7 @@
 * {
     display: block;
 }
+
+.color-danger{
+    color: orange;
+}

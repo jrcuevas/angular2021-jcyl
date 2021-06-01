@@ -9,4 +9,5 @@
 <input type="text" id="nombre" name="nombre" (keyup)="actualizaNombre($event)">
 <label for="apellidos">Apellidos</label>
 <input type="text" id="apellidos" name="apellidos" (keyup)="actualizaApellidos(apellidos.value)" #apellidos>
+<p *ngIf="!solicitud.apellidos.length" class="color-danger">Los apellidos no pueden ser nulos.</p>
 <button (click)="enviar()">Enviar</button>
