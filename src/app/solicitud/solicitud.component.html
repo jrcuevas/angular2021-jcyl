@@ -1,1 +1,3 @@
-<p>{{solicitud.nombre}}</p>
+<p [style.color]="+solicitud.nombre > 0.5 ? 'red' : 'blue'">style.color aleatorio</p>
+<p [ngStyle]="{'background-color': 'red'}">background-color con ngStyle</p>
+<p [ngClass]="{'has-background-danger': solicitud.nombre, input:true}">valor de clases con ngClass</p>
