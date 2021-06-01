@@ -1,4 +1,12 @@
-<p [style.color]="+solicitud.nombre > 0.5 ? 'red' : 'blue'">style.color aleatorio</p>
+<p [style.color]="+color > 0.5 ? 'red' : 'blue'">style.color aleatorio</p>
 <p [ngStyle]="{'background-color': 'red'}">background-color con ngStyle</p>
 <p [ngClass]="{'has-background-danger': solicitud.nombre, input:true}">valor de clases con ngClass</p>
 <div><button (click)="saludo()">Pulsa aqui</button></div>
+
+<h1>Solicitud de Comedor</h1>
+<h2>Nueva Solicitud</h2>
+<label for="nombre">Nombre</label>
+<input type="text" id="nombre" name="nombre" (keyup)="actualizaNombre($event)">
+<label for="apellidos">Apellidos</label>
+<input type="text" id="apellidos" name="apellidos" (keyup)="actualizaApellidos(apellidos.value)" #apellidos>
+<button (click)="enviar()">Enviar</button>

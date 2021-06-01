@@ -7,14 +7,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SolicitudComponent implements OnInit {
 
-  solicitud = {nombre: "José"};
+  color:string = ''
+
+  solicitud = {nombre: "José Ramón", apellidos: "Cuevas Diez"};
 
   constructor() {
     setInterval(() => {
-      this.solicitud.nombre = '' + Math.random(); }, 2000)
+      this.color = '' + Math.random(); }, 2000)
   }
 
   ngOnInit(): void {
+  }
+
+  actualizaNombre($event:KeyboardEvent){
+    const element = $event.target as HTMLInputElement
+    this.solicitud.nombre = element.value
+  }
+
+  actualizaApellidos($apellidos:string){
+    this.solicitud.apellidos = $apellidos
+  }
+
+  enviar(){
+    console.log(`Nombre: ${this.solicitud.nombre}`)
+    console.log(`Àpellidos: ${this.solicitud.apellidos}`)
   }
 
   saludo(){
