@@ -2,6 +2,19 @@
     display: block;
 }
 
+td, th {
+    display: inline-table;
+    width: 100px;
+}
+
 .color-danger{
     color: orange;
+}
+
+.even {
+    background-color: gray;
+}
+
+.odd {
+    background-color: burlywood;
 }

@@ -9,6 +9,9 @@ export class SolicitudComponent implements OnInit {
 
   color:string = ''
 
+  solicitudes = [{nombre: "Ana", apellidos: "Marin"},
+              {nombre: "Pedro", apellidos: "Cruzado"}]
+
   solicitud = {nombre: "José Ramón", apellidos: "Cuevas Diez"};
 
   constructor() {

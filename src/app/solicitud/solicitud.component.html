@@ -11,3 +11,13 @@
 <input type="text" id="apellidos" name="apellidos" (keyup)="actualizaApellidos(apellidos.value)" #apellidos>
 <p *ngIf="!solicitud.apellidos.length" class="color-danger">Los apellidos no pueden ser nulos.</p>
 <button (click)="enviar()">Enviar</button>
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+    </tr>
+<tr *ngFor="let solicitud of solicitudes; let odd = odd; let even = even"  [ngClass]="{odd: odd, even: even}">
+    <td>{{solicitud.nombre}}</td>
+    <td>{{solicitud.apellidos}}</td>
+</tr>
+</table>
