@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Centro } from '../comedor.modelo';
+import { Centro, Solicitud } from '../comedor.modelo';
 
 @Component({
   selector: 'app-solicitud',
@@ -12,10 +12,11 @@ export class SolicitudComponent implements OnInit {
 
   centro: Centro = {nombre: "Comedor Público", direccion: "Calle Buenavista s/n"};
 
-  solicitudes = [{nombre: "Ana", apellidos: "Marin"},
-              {nombre: "Pedro", apellidos: "Cruzado"}]
+  solicitudes = [{nombre: "Ana", apellidos: "Marin", nacimiento: new Date(1970, 1, 11)},
+              {nombre: "Pedro", apellidos: "Cruzado", nacimiento: new Date(1971, 11, 30)},
+              {nombre: "José Ramón", apellidos: "Cuevas Diez", nacimiento: new Date(1970, 1, 12)}]
 
-  solicitud = {nombre: "José Ramón", apellidos: "Cuevas Diez"};
+  solicitud: Solicitud = {} as Solicitud;
 
   constructor() {
     setInterval(() => {

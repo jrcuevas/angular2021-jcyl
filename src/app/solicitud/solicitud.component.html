@@ -9,16 +9,18 @@
 <input type="text" id="nombre" name="nombre" (keyup)="actualizaNombre($event)">
 <label for="apellidos">Apellidos</label>
 <input type="text" id="apellidos" name="apellidos" (keyup)="actualizaApellidos(apellidos.value)" #apellidos>
-<p *ngIf="!solicitud.apellidos.length" class="color-danger">Los apellidos no pueden ser nulos.</p>
+<p *ngIf="!solicitud?.apellidos?.length" class="color-danger">Los apellidos no pueden ser nulos.</p>
 <button (click)="enviar()">Enviar</button>
 <table>
     <tr>
         <th>Nombre</th>
         <th>Apellidos</th>
+        <th>Fecha nacimiento</th>
     </tr>
 <tr *ngFor="let solicitud of solicitudes; let odd = odd; let even = even"  [ngClass]="{odd: odd, even: even}">
     <td>{{solicitud.nombre}}</td>
     <td>{{solicitud.apellidos}}</td>
+    <td>{{solicitud.nacimiento | date: "dd/MM/yyyy"}}</td>
 </tr>
 </table>
 <app-selector-centro></app-selector-centro>
