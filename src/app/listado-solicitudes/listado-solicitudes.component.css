@@ -1,0 +1,6 @@
+.field-title{
+    display:table-cell;
+    font-weight: bold;
+    width: 100px;
+    border-bottom: 3px, solid, black;
+}

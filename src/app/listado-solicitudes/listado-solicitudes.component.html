@@ -1,0 +1,9 @@
+<div>
+    <p>
+        <span class="field-title">Nombre</span>
+        <span class="field-title">Apellidos</span>
+        <span class="field-title">Nacimiento</span>
+        <span class="field-title">Acccion</span>
+    </p>
+    <app-item-solicitud *ngFor="let solicitud of solicitudes" (eliminar)="eliminarSolicitud($event)" [solicitud]="solicitud"></app-item-solicitud>
+</div>

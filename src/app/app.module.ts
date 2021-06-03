@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { SolicitudComponent } from './solicitud/solicitud.component';
 import { CentroComponent } from './centro/centro.component';
 import { SelectorCentroComponent } from './selector-centro/selector-centro.component';
+import { ListadoSolicitudesComponent } from './listado-solicitudes/listado-solicitudes.component';
+import { ItemSolicitudComponent } from './item-solicitud/item-solicitud.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SolicitudComponent,
     CentroComponent,
-    SelectorCentroComponent
+    SelectorCentroComponent,
+    ListadoSolicitudesComponent,
+    ItemSolicitudComponent
   ],
   imports: [
     BrowserModule,
