@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Centro } from '../comedor.modelo';
 
 @Component({
   selector: 'app-solicitud',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class SolicitudComponent implements OnInit {
 
   color:string = ''
+
+  centro: Centro = {nombre: "Comedor Público", direccion: "Calle Buenavista s/n"};
 
   solicitudes = [{nombre: "Ana", apellidos: "Marin"},
               {nombre: "Pedro", apellidos: "Cruzado"}]

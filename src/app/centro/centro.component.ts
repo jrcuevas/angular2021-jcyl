@@ -1,4 +1,6 @@
+import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+import { Centro } from '../comedor.modelo';
 
 @Component({
   selector: 'app-centro',
@@ -8,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CentroComponent implements OnInit {
 
-  centro = {nombre: "Comedor público", direccion: "Calle Buenavista s/n"}
+  @Input() centro: Centro = {nombre: '', direccion: ''};
 
   constructor() { }
 
