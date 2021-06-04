@@ -4,8 +4,10 @@ import { Centro } from '../comedor.modelo';
 
 @Component({
   selector: 'app-centro',
-  template: `<p>Nombre: {{centro.nombre}}</p>
-              <p>Dirección: {{centro.direccion}}</p>`,
+  template: `<div class="wrap">
+                <span>Nombre: {{centro.nombre}}</span><br>
+                <span>Dirección: {{centro.direccion}}</span>
+             </div>`,
   styleUrls: ['./centro.component.css']
 })
 export class CentroComponent implements OnInit {

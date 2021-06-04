@@ -1,8 +1,6 @@
-<div>
-    <p>
+<div class="wrap">
         <span class="field-value">{{solicitud?.nombre}}</span>
         <span class="field-value">{{solicitud?.apellidos}}</span>
         <span class="field-value">{{solicitud?.nacimiento | date: "dd/MM/yyyy"}}</span>
         <span class="field-value"><button (click)="eliminarSolicitud(solicitud)">Eliminar</button></span>
-    </p>
 </div>
