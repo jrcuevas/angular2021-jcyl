@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Solicitud } from './comedor.modelo';
 
 @Injectable({
@@ -15,10 +16,9 @@ export class SolicitudesService {
     {nombre: "José Ramón", apellidos: "Cuevas Diez", nacimiento: new Date(1970, 1, 12)}];
   }
 
-  public getSolicitudes(): any{
+  public getSolicitudes(): Observable<Object[]>{
     const accessToken = 'w553KmY_mhtkpRngkuh6qoYMPc-McVjwAjSNbQ0IxNs';
-    return this.httpClient.get(
-      `https://cdn.contentful.com/spaces/im9x7su136k8/environments/master/entries?access_token=${accessToken}`)
-      .toPromise();
+    return this.httpClient.get<Object[]>(
+      `https://cdn.contentful.com/spaces/im9x7su136k8/environments/master/entries?access_token=${accessToken}`);
   }
 }

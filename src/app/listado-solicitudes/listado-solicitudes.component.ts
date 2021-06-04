@@ -16,12 +16,17 @@ export class ListadoSolicitudesComponent implements OnInit {
 
   ngOnInit(): void {
     this.solicitudes = this.solicitudesService.conseguirSolicitudes();
-    this.solicitudesService.getSolicitudes().then((x: any) => console.log(x));
+    //this.solicitudesService.getSolicitudes().then((x)=>console.log(x));
   }
 
   eliminarSolicitud($event: Solicitud){
     let index = this.solicitudes.indexOf($event);
     this.solicitudes.splice(index, 1);
+  }
+  
+  getSolicitudes(){
+    return this.solicitudesService.getSolicitudes();
+    // this.solicitudesService.getSolicitudes().toPromise().then((x)=>console.log(x))
   }
 
 }

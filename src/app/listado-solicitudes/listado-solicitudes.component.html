@@ -1,4 +1,9 @@
 <div>
+    <ul>
+        <li *ngFor="let item of (getSolicitudes() | async)">
+            {{item | json}}
+        <li>
+    </ul>
     <p>
         <span class="field-title">Nombre</span>
         <span class="field-title">Apellidos</span>
