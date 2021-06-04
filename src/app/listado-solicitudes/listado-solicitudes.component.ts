@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Solicitud } from '../comedor.modelo';
+import { SolicitudesService } from '../solicitudes.service';
 
 @Component({
   selector: 'app-listado-solicitudes',
@@ -10,13 +11,11 @@ export class ListadoSolicitudesComponent implements OnInit {
 
   solicitudes: Solicitud[] = [];
 
-  constructor() { 
-    this.solicitudes = [{nombre: "Ana", apellidos: "Marin", nacimiento: new Date(1970, 1, 11)},
-    {nombre: "Pedro", apellidos: "Cruzado", nacimiento: new Date(1971, 11, 30)},
-    {nombre: "José Ramón", apellidos: "Cuevas Diez", nacimiento: new Date(1970, 1, 12)}]
+  constructor(private solicitudesService: SolicitudesService) {
   }
 
   ngOnInit(): void {
+    this.solicitudes = this.solicitudesService.conseguirSolicitudes();
   }
 
   eliminarSolicitud($event: Solicitud){
