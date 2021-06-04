@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Centro, Solicitud } from '../comedor.modelo';
 
 @Component({
@@ -18,7 +19,8 @@ export class SolicitudComponent implements OnInit {
 
   solicitud: Solicitud = {} as Solicitud;
 
-  constructor() {
+  constructor(private route: ActivatedRoute) {
+    this.route.params.subscribe((x)=> console.log(x));
     setInterval(() => {
       this.color = '' + Math.random(); }, 2000)
   }

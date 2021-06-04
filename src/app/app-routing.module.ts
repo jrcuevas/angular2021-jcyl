@@ -5,7 +5,7 @@ import { SolicitudComponent } from './solicitud/solicitud.component';
 
 const routes: Routes = [
   {path: '', component: ListadoSolicitudesComponent},
-  {path: 'solicitud', component: SolicitudComponent}
+  {path: 'solicitud/:id', component: SolicitudComponent}
 ];
 
 @NgModule({
