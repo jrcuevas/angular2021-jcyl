@@ -1,11 +1,11 @@
 <form #f="ngForm" (ngSubmit)="submit(f)">
     <label for="pais">Pais</label><br>
-    <input type="text" ngModel name="pais" ><br>
+    <input type="text" ngModel name="pais" required minlength="4" maxlength="15" size="15"><br>
     <label for="iban">IBAN</label><br>
-    <input type="text" ngModel name="iban" ><br>
+    <input type="text" ngModel name="iban" required minlength="20" maxlength="20" size="20"><br>
     <label for="entidad">Entidad</label><br>
-    <input type="text" ngModel name="entidad" ><br>
+    <input type="text" ngModel name="entidad" required minlength="4" maxlength="4" size="4"><br>
     <label for="sucursal">Sucursal</label><br>
-    <input type="text" ngModel name="sucursal" ><br>
-    <button type="submit" >Enviar</button>
+    <input type="text" ngModel name="sucursal" required minlength="4" maxlength="4" size="4"><br>
+    <button type="submit" [disabled]="f.invalid">Enviar</button>
 </form>

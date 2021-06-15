@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-datos-bancarios',
@@ -12,7 +13,7 @@ export class DatosBancariosComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  submit(f: any){
+  submit(f: NgForm){
     console.log(f);
   }
 
