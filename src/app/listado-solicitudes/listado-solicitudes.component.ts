@@ -17,6 +17,7 @@ export class ListadoSolicitudesComponent implements OnInit {
   ngOnInit(): void {
     this.solicitudes = this.solicitudesService.conseguirSolicitudes();
     //this.solicitudesService.getSolicitudes().then((x)=>console.log(x));
+    this.solicitudesService.getSolicitudes().toPromise().then((x)=>console.log(x));
   }
 
   eliminarSolicitud($event: Solicitud){

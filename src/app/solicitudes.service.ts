@@ -17,8 +17,9 @@ export class SolicitudesService {
   }
 
   public getSolicitudes(): Observable<Object[]>{
+    //const accessToken = 'w553KmY_mhtkpRngkuh6qoYMPc-McVjwAjSNbQ0IxNs';
     const accessToken = 'w553KmY_mhtkpRngkuh6qoYMPc-McVjwAjSNbQ0IxNs';
-    return this.httpClient.get<Object[]>(
+    return this.httpClient.get<any>(
       `https://cdn.contentful.com/spaces/im9x7su136k8/environments/master/entries?access_token=${accessToken}`);
   }
 }

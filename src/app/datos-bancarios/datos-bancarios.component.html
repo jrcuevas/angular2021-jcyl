@@ -1,0 +1,11 @@
+<form #f="ngForm" (ngSubmit)="submit(f)">
+    <label for="pais">Pais</label><br>
+    <input type="text" ngModel name="pais" ><br>
+    <label for="iban">IBAN</label><br>
+    <input type="text" ngModel name="iban" ><br>
+    <label for="entidad">Entidad</label><br>
+    <input type="text" ngModel name="entidad" ><br>
+    <label for="sucursal">Sucursal</label><br>
+    <input type="text" ngModel name="sucursal" ><br>
+    <button type="submit" >Enviar</button>
+</form>

@@ -10,18 +10,22 @@ import { SelectorCentroComponent } from './selector-centro/selector-centro.compo
 import { ListadoSolicitudesComponent } from './listado-solicitudes/listado-solicitudes.component';
 import { ItemSolicitudComponent } from './item-solicitud/item-solicitud.component';
 import { SolicitudModule } from './solicitud-module/solicitud.module';
+import { FormsModule } from '@angular/forms';
+import { DatosBancariosComponent } from './datos-bancarios/datos-bancarios.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListadoSolicitudesComponent,
-    ItemSolicitudComponent
+    ItemSolicitudComponent,
+    DatosBancariosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    SolicitudModule
+    SolicitudModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
