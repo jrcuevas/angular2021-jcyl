@@ -13,6 +13,7 @@ import { SolicitudModule } from './solicitud-module/solicitud.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DatosBancariosComponent } from './datos-bancarios/datos-bancarios.component';
 import { DatosBancariosCComponent } from './datos-bancarios-c/datos-bancarios-c.component';
+import { Solicitud2Component } from './solicitud2/solicitud2.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DatosBancariosCComponent } from './datos-bancarios-c/datos-bancarios-c.
     ListadoSolicitudesComponent,
     ItemSolicitudComponent,
     DatosBancariosComponent,
-    DatosBancariosCComponent
+    DatosBancariosCComponent,
+    Solicitud2Component
   ],
   imports: [
     BrowserModule,
