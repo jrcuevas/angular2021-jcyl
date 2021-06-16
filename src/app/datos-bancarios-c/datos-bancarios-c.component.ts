@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, ValidationErrors, Validator, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-datos-bancarios-c',
@@ -15,8 +15,12 @@ export class DatosBancariosCComponent implements OnInit {
       pais: '',
       iban: '',
       entidad: '',
-      sucursal: ''
+      sucursal: new FormControl('0000', [Validators.required, this.myValidator])
     });
+  }
+
+  myValidator(formControl: FormControl) : ValidationErrors | null{
+    return (formControl.value === '0000')? {error: 'Valor inválido: "0000" no existe'} : null;
   }
 
   ngOnInit(): void {
