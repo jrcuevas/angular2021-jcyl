@@ -9,14 +9,17 @@ import { FormBuilder, FormControl, FormGroup, ValidationErrors, Validator, Valid
 export class DatosBancariosCComponent implements OnInit {
 
   formGroup: FormGroup;
+  sucursalControl: FormControl;
 
   constructor(private formbuilder: FormBuilder) { 
+    this.sucursalControl = new FormControl('0000', [Validators.required, this.myValidator]);
     this.formGroup = formbuilder.group({
       pais: '',
       iban: '',
       entidad: '',
-      sucursal: new FormControl('0000', [Validators.required, this.myValidator])
+      sucursal: this.sucursalControl
     });
+    this.sucursalControl.valueChanges.subscribe((x)=> console.log(x));
   }
 
   myValidator(formControl: FormControl) : ValidationErrors | null{
