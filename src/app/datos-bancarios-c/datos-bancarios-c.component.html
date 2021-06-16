@@ -1,0 +1,11 @@
+<form [formGroup]="formGroup">
+    <label for="pais">Pais</label><br>
+    <input type="text" name="pais" formControlName="pais" required minlength="4" maxlength="15" size="15"><br>
+    <label for="iban">IBAN</label><br>
+    <input type="text" name="iban" formControlName="iban" required minlength="20" maxlength="20" size="20"><br>
+    <label for="entidad">Entidad</label><br>
+    <input type="text" name="entidad" formControlName="entidad" required minlength="4" maxlength="4" size="4"><br>
+    <label for="sucursal">Sucursal</label><br>
+    <input type="text" name="sucursal" formControlName="sucursal" required minlength="4" maxlength="4" size="4"><br>
+    <button (click)="submit()" [disabled]="formGroup.invalid">Enviar</button>
+</form>
