@@ -17,11 +17,20 @@
         <th>Apellidos</th>
         <th>Fecha nacimiento</th>
     </tr>
-<tr *ngFor="let solicitud of solicitudes; let odd = odd; let even = even"  [ngClass]="{odd: odd, even: even}">
-    <td>{{solicitud.nombre}}</td>
-    <td>{{solicitud.apellidos}}</td>
-    <td>{{solicitud.nacimiento | date: "dd/MM/yyyy"}}</td>
-</tr>
+    <tr *ngFor="let solicitud of solicitudes; let odd = odd; let even = even" [ngClass]="{odd: odd, even: even}">
+        <td>{{solicitud.nombre}}</td>
+        <td>{{solicitud.apellidos}}</td>
+        <td>{{solicitud.nacimiento | date: "dd/MM/yyyy"}}</td>
+    </tr>
 </table>
 <app-selector-centro></app-selector-centro>
 <app-centro [centro]="centro"></app-centro>
+
+<p>
+    <mat-form-field color="accent" appearance="outline">
+        <mat-label>Seleccione una fecha</mat-label>
+        <input matInput [matDatepicker]="picker" placeholder="date" (dateInput)="date_input($event)" >
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker color="primary"></mat-datepicker>
+    </mat-form-field>
+</p>

@@ -45,4 +45,8 @@ export class SolicitudComponent implements OnInit {
   saludo(){
     console.log(`Hola ${this.solicitud.nombre}`);
   }
+
+  date_input($event: any){
+    console.log($event);
+  }
 }

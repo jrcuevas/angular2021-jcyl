@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DatosBancariosComponent } from './datos-bancarios/datos-bancarios.component';
 import { DatosBancariosCComponent } from './datos-bancarios-c/datos-bancarios-c.component';
 import { Solicitud2Component } from './solicitud2/solicitud2.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { Solicitud2Component } from './solicitud2/solicitud2.component';
     HttpClientModule,
     SolicitudModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
