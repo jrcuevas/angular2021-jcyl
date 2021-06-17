@@ -8,11 +8,14 @@ import { SolicitudComponent } from './solicitud/solicitud.component';
 import { Solicitud2Component } from './solicitud2/solicitud2.component';
 
 const routes: Routes = [
-  {path: '', component: ListadoSolicitudesComponent, canActivate: [AuthenticationGuard]},
-  {path: 'solicitud/:id', component: SolicitudComponent},
-  {path: 'solicitud2', component: Solicitud2Component},
-  {path: 'datos_bancarios', component: DatosBancariosComponent},
-  {path: 'datos_bancarios_c', component: DatosBancariosCComponent}
+  { path: '', component: ListadoSolicitudesComponent, canActivate: [AuthenticationGuard] },
+  {
+    path: 'solicitud', loadChildren: () =>
+      import('./solicitud-module/solicitud.module').then(m => m.SolicitudModule)
+  },
+  { path: 'solicitud2', component: Solicitud2Component },
+  { path: 'datos_bancarios', component: DatosBancariosComponent },
+  { path: 'datos_bancarios_c', component: DatosBancariosCComponent }
 ];
 
 @NgModule({
