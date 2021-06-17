@@ -15,6 +15,7 @@ import { DatosBancariosComponent } from './datos-bancarios/datos-bancarios.compo
 import { DatosBancariosCComponent } from './datos-bancarios-c/datos-bancarios-c.component';
 import { Solicitud2Component } from './solicitud2/solicitud2.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ItemSolicitudComponent,
     DatosBancariosComponent,
     DatosBancariosCComponent,
-    Solicitud2Component
+    Solicitud2Component,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

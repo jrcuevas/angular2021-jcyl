@@ -4,7 +4,7 @@ import { AuthenticationGuard } from './authentication.guard';
 import { DatosBancariosCComponent } from './datos-bancarios-c/datos-bancarios-c.component';
 import { DatosBancariosComponent } from './datos-bancarios/datos-bancarios.component';
 import { ListadoSolicitudesComponent } from './listado-solicitudes/listado-solicitudes.component';
-import { SolicitudComponent } from './solicitud/solicitud.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 import { Solicitud2Component } from './solicitud2/solicitud2.component';
 
 const routes: Routes = [
@@ -15,7 +15,8 @@ const routes: Routes = [
   },
   { path: 'solicitud2', component: Solicitud2Component },
   { path: 'datos_bancarios', component: DatosBancariosComponent },
-  { path: 'datos_bancarios_c', component: DatosBancariosCComponent }
+  { path: 'datos_bancarios_c', component: DatosBancariosCComponent },
+  { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({
